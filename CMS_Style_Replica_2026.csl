@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" default-locale="en-GB">
+  <info>
+    <title>Comparative Migration Studies Replica 2026</title>
+    <id>http://custom/cms-replica-2026</id>
+  </info>
+  <citation et-al-min="4" et-al-use-first="1" disambiguate-add-year-suffix="true">
+    <layout prefix="(" suffix=")" delimiter="; ">
+      <group delimiter=", ">
+        <text variable="author" form="short"/>
+        <date variable="issued"><date-part name="year"/></date>
+      </group>
+    </layout>
+  </citation>
+  <bibliography hanging-indent="true" entry-spacing="1">
+    <sort><key variable="author"/><key variable="issued"/></sort>
+    <layout>
+      <text variable="author" suffix=" "/>
+      <date variable="issued" prefix="(" suffix="). "><date-part name="year"/></date>
+      <choose>
+        <if type="article-journal">
+          <text variable="title" prefix="‘" suffix="’, "/>
+          <text variable="container-title" font-style="italic" suffix=", "/>
+          <group suffix=", ">
+            <text variable="volume"/>
+            <text variable="issue" prefix="(" suffix=")"/>
+          </group>
+          <text variable="page" prefix="pp. "/>
+          <text variable="DOI" prefix=". Available at: https://doi.org/" suffix="."/>
+        </if>
+        <else-if type="book">
+          <text variable="title" font-style="italic" suffix=". "/>
+          <text variable="publisher-place" suffix=": "/>
+          <text variable="publisher"/>
+          <text variable="URL" prefix=". Available at: " suffix="."/>
+        </else-if>
+        <else-if type="chapter paper-conference">
+          <text variable="title" prefix="‘" suffix="’, in "/>
+          <text variable="container-title" font-style="italic"/>
+          <text variable="publisher-place" prefix=". " suffix=": "/>
+          <text variable="publisher"/>
+          <text variable="page" prefix=", pp. "/>
+        </else-if>
+        <else>
+          <text variable="title" suffix=". "/>
+          <text variable="container-title" font-style="italic" suffix=", "/>
+          <text variable="URL" prefix="Available at: "/>
+          <date variable="accessed" prefix=" (Accessed: " suffix=")">
+            <date-part name="day"/><date-part name="month" form="long"/><date-part name="year"/>
+          </date>
+        </else>
+      </choose>
+    </layout>
+  </bibliography>
+</style>
