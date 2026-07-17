@@ -18,7 +18,7 @@
     </contributor>
     <category citation-format="author-date"/>
     <summary>Springer Author Date Style for the disciplines Medicine, Biomedicine, Life Sciences, Chemistry, Geosciences, Computer Science, Engineering, Economics. This style is based on Harvard style and recommendations of the Council of Biology Editors.</summary>
-    <updated>2026-07-17T14:35:34+00:00</updated>
+    <updated>2026-07-17T15:17:51+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale>
@@ -137,8 +137,8 @@
           <group prefix=", " delimiter=", ">
             <text variable="publisher"/>
             <text variable="publisher-place"/>
-            <group delimiter=", ">
-              <label variable="page" form="short" strip-periods="true"/>
+            <group delimiter=" ">
+              <label variable="page" form="short"/>
               <text variable="page"/>
             </group>
           </group>
@@ -153,15 +153,15 @@
                     <text variable="volume"/>
                     <text variable="issue" prefix="(" suffix=")"/>
                   </group>
-                  <text variable="page" prefix=" pp. "/>
+                  <text variable="page" prefix=" "/>
                 </group>
-                <text prefix="Available at: https://doi.org/" variable="DOI" suffix="."/>
+                <text variable="DOI" prefix="Available at: " suffix="."/>
               </group>
             </if>
             <else>
               <group prefix=", " delimiter=". ">
                 <text variable="container-title" font-style="italic"/>
-                <text prefix="Available at: https://doi.org/" variable="DOI" suffix="."/>
+                <text variable="DOI" prefix="Available at: " suffix="."/>
               </group>
             </else>
           </choose>
